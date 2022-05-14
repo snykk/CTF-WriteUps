@@ -1,0 +1,25 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sat May 14 16:06:30 2022
+Invocation: foremost test.jpg 
+Output directory: /home/fikri/Documents/CTF/Laos Arena 2/Forensic/hide file?  (is_done)/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: test.jpg
+Start: Sat May 14 16:06:30 2022
+Length: 57 KB (58549 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.jpg 	      55 KB 	          0 	 
+1:	00000111.png 	       1 KB 	      57031 	  (360 x 100)
+Finish: Sat May 14 16:06:30 2022
+
+2 FILES EXTRACTED
+	
+jpg:= 1
+png:= 1
+------------------------------------------------------------------
+
+Foremost finished at Sat May 14 16:06:30 2022
