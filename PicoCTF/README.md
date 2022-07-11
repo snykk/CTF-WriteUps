@@ -23,3 +23,35 @@ The challenge gives us a link to download a certain data. We can use `wget` comm
 > picoCTF{s4n1ty_v3r1f13d_f28ac910}
 
 
+## Mod 26
+
+### Description
+
+Cryptography can be easy, do you know what ROT13 is? `cvpbPGS{arkg_gvzr_V'yy_gel_2_ebhaqf_bs_ebg13_nSkgmDJE}`
+
+### Information
+
+***Point Value***: 10 points
+
+***Category***:  Cryptography
+
+### Hints
+
+1. This can be solved online if you don't want to do it by hand!
+
+### Solution
+
+to solve this challenge i don't want to do it online but with a simple python script
+
+#### solve.py
+```
+import codecs
+
+strings = "cvpbPGS{arkg_gvzr_V'yy_gel_2_ebhaqf_bs_ebg13_nSkgmDJE}"
+print(codecs.encode(strings, 'rot_13'))
+
+```
+
+### Flag
+> picoCTF{next_time_I'll_try_2_rounds_of_rot13_aFxtzQWR}
+
