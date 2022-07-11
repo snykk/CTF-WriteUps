@@ -22,7 +22,6 @@ The challenge gives us a link to download a certain data. We can use `wget` comm
 ### Flag
 > picoCTF{s4n1ty_v3r1f13d_f28ac910}
 
-
 ## Mod 26
 
 ### Description
@@ -54,4 +53,30 @@ print(codecs.encode(strings, 'rot_13'))
 
 ### Flag
 > picoCTF{next_time_I'll_try_2_rounds_of_rot13_aFxtzQWR}
+
+## Python Wrangling
+
+### Description
+
+Python scripts are invoked kind of like programs in the Terminal... Can you run [this Python script](https://mercury.picoctf.net/static/0bf545252b5120845e3b568b9ad0277e/ende.py) using [this password](https://mercury.picoctf.net/static/0bf545252b5120845e3b568b9ad0277e/pw.txt) to get [the flag](https://mercury.picoctf.net/static/0bf545252b5120845e3b568b9ad0277e/flag.txt.en)?
+
+### Information
+
+***Point Value***: 10 points
+
+***Category***:  General Skills
+
+### Hints
+
+1. Get the Python script accessible in your shell by entering the following command in the Terminal prompt: `$ wget https://mercury.picoctf.net/static/0bf545252b5120845e3b568b9ad0277e/ende.py`
+2. `man python`
+
+### Solution
+
+Download all sources first using `wget` command. We must get the python script, encryption text and password. And then, See what python script actually does.Now we are ready to decrypt the message using the command `python ende.py -d <encrypt_file_path.txt.en>`. Last, don`t forget to insert password correctly.
+> python ende.py -d flag.txt.en
+> Please enter the password:6008014f6008014f6008014f6008014f
+
+### Flag
+> picoCTF{4p0110_1n_7h3_h0us3_6008014f}
 
