@@ -276,8 +276,8 @@ I decided to try something noone else has before. I made a bot to automatically 
  
 We can figure out the system data with input user. Try to put this string `"%x%x%x%x%x%x%x"` in input (length of the string is what you want). he output will contain a hex digit which might be a flag. I have been make an input in "input" file (we only use fitur 1 [buy some stonks] because the vuln command is on that).
 
-> nc mercury.picoctf.net 33411
-> 1
+> nc mercury.picoctf.net 33411\
+> 1\
 > %x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x
 
 And we got this:
@@ -291,3 +291,26 @@ after a few seconds we've got the flag, but not done here. It's looks like a lit
 ### Flag
 > picoCTF{I_l05t_4ll_my_m0n3y_a24c14a6}
 
+
+## GET aHEAD
+
+### Description
+
+Find the flag being held on this server to get ahead of the competition [http://mercury.picoctf.net:15931/](http://mercury.picoctf.net:15931/)
+
+### Information
+
+***Point Value***: 20 points
+
+***Category***:  Web Exploitation
+
+### Hints
+
+1. Maybe you have more than 2 choices
+2. Check out tools like Burpsuite to modify your requests and look at the responses
+
+### Solution
+We can use the burpsuite suite to handle and manipulate requests. change "GET" method to "HEAD" and we can see the difference in response
+
+### Flag
+> picoCTF{r3j3ct_th3_du4l1ty_82880908}
