@@ -348,3 +348,26 @@ Run this [script](https://github.com/snykk/CTF-WriteUps/blob/master/PicoCTF/Cryp
 
 ### Flag
 > picoCTF{sma11_N_n0_g0od_00264570}
+
+
+## Static ain't always noise
+
+### Description
+
+Can you look at the data in this binary: [static](https://mercury.picoctf.net/static/ec4dbd8898ade34e1d60d5b70c1b8c8c/static)? This [BASH script](https://mercury.picoctf.net/static/ec4dbd8898ade34e1d60d5b70c1b8c8c/ltdis.sh) might help!
+
+### Information
+
+***Point Value***: 20 points
+
+***Category***:  General Skills
+
+### Hints
+no hint
+
+### Solution
+We can use the strings command to get all the readable content of the ELF file. Add grep with pipe to get specific content using pico ctf flag pattern
+> strings static | grep pico
+
+### Flag
+> picoCTF{d15a5m_t34s3r_98d35619}
