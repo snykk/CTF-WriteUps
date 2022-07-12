@@ -366,8 +366,31 @@ Can you look at the data in this binary: [static](https://mercury.picoctf.net/st
 no hint
 
 ### Solution
-We can use the strings command to get all the readable content of the ELF file. Add grep with pipe to get specific content using pico ctf flag pattern
+We can use the strings command to get all the readable content of the [ELF file](https://github.com/snykk/CTF-WriteUps/tree/master/PicoCTF/General%20Skills/Static%20aint%20always%20noise). Add grep with pipe to get specific content using pico ctf flag pattern
 > strings static | grep pico
 
 ### Flag
 > picoCTF{d15a5m_t34s3r_98d35619}
+
+
+## Tab, Tab, Attack
+
+### Description
+
+Using tabcomplete in the Terminal will add years to your life, esp. when dealing with long rambling directory structures and filenames: [Addadshashanammu.zip](https://mercury.picoctf.net/static/e38f6a5b69b45d21e33cf7281d8c2531/Addadshashanammu.zip)
+
+### Information
+
+***Point Value***: 20 points
+
+***Category***:  General Skills
+
+### Hints
+1. After `unzip`ing, this problem can be solved with 11 button-presses...(mostly Tab)...
+
+### Solution
+Extract the zip file first. And then use the `cd` command and tab power to go deeper until we find and the ELF file. Run to get the flag
+
+### Flag
+> picoCTF{l3v3l_up!_t4k3_4_r35t!_f3553887}
+
