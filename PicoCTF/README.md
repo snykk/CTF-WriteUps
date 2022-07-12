@@ -314,3 +314,37 @@ We can use the burpsuite suite to handle and manipulate requests. change "GET" m
 
 ### Flag
 > picoCTF{r3j3ct_th3_du4l1ty_82880908}
+
+
+## Mind your Ps and Qs
+
+### Description
+
+In RSA, a small `e` value can be problematic, but what about `N`? Can you decrypt this? [values](https://mercury.picoctf.net/static/12d820e355a7775a2c9129b2622a7eb6/values)
+
+### Information
+
+***Point Value***: 20 points
+
+***Category***:  Cryptography
+
+### Hints
+1. Bits are expensive, I used only a little bit over 100 to save money
+
+### Solution
+RSA is all about crazy big prime factorization. If you new for this try to learn more about what [RSA](https://en.wikipedia.org/wiki/RSA_(cryptosystem)) is. Here summary of the RSA theorem:
+
+- C = Ciphertext
+- M = Message (plain text)
+- p and q = big prime numbers
+- n = p * q
+- phi = (p-1) * (q-1)
+- e = some number that 1 < e < phi and gcd(e,phi) == 1 
+- e * d = 1 mod phi and 0 <= d <= n
+- C = M^e mod , where 0 <= M < N (for encryption)
+- M = C^d mod n (for decryption)
+
+Run this [script](https://github.com/snykk/CTF-WriteUps/blob/master/PicoCTF/Cryptography/Mind%20Your%20Ps%20and%20Qs/solve.py) to get the flag
+
+### Flag
+> picoCTF{sma11_N_n0_g0od_00264570}
