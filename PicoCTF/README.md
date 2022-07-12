@@ -22,6 +22,7 @@ The challenge gives us a link to download a certain data. We can use `wget` comm
 ### Flag
 > picoCTF{s4n1ty_v3r1f13d_f28ac910}
 
+
 ## Mod 26
 
 ### Description
@@ -54,6 +55,7 @@ print(codecs.encode(strings, 'rot_13'))
 ### Flag
 > picoCTF{next_time_I'll_try_2_rounds_of_rot13_aFxtzQWR}
 
+
 ## Python Wrangling
 
 ### Description
@@ -79,6 +81,7 @@ Download all sources first using `wget` command. We must get the python script, 
 
 ### Flag
 > picoCTF{4p0110_1n_7h3_h0us3_6008014f}
+
 
 ## Wave a flag
 
@@ -187,3 +190,28 @@ Now we got a string. Time to decrypt
 ### Flag
 > picoCTF{the_m3tadata_1s_modified}
 
+
+## Nice netcat...
+
+### Description
+
+There is a nice program that you can talk to by using this command in a shell: `$ nc mercury.picoctf.net 22342`, but it doesn't speak English...
+
+### Information
+
+***Point Value***: 15 points
+
+***Category***:  General Skills
+
+### Hints
+
+1. You can practice using `netcat` with this picoGym problem: [what's a netcat?](https://play.picoctf.org/practice/challenge/34)
+2. You can practice reading and writing ASCII with this picoGym problem: [Let's Warm Up](https://play.picoctf.org/practice/challenge/22)
+
+### Solution
+
+If we run nc from the terminal, the output is only number. I think its a decimal number from ascii. Therefore, we need to convert that decimal to char. In this situation we can use `awk` command. Try to run this: 
+> nc mercury.picoctf.net 22342 | awk '{printf "%c",$1}'
+
+### Flag
+> picoCTF{g00d_k1tty!_n1c3_k1tty!_5fb5e51d}

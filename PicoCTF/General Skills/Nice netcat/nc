@@ -1,0 +1,1 @@
+nc mercury.picoctf.net 22342
