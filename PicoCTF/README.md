@@ -215,3 +215,36 @@ If we run nc from the terminal, the output is only number. I think its a decimal
 
 ### Flag
 > picoCTF{g00d_k1tty!_n1c3_k1tty!_5fb5e51d}
+
+
+## Transformation
+
+### Description
+
+I wonder what this really is... [enc](https://mercury.picoctf.net/static/e47483f88b12f2ab0c46315afc12f64d/enc) `''.join([chr((ord(flag[i]) << 8) + ord(flag[i + 1])) for i in range(0, len(flag), 2)])`
+
+### Information
+
+***Point Value***: 20 points
+
+***Category***:  Reverse Engineering
+
+### Hints
+
+1. You may find some decoders online
+
+### Solution
+
+The challenge gives us encryption algorithm, and encrypted text. So we can get the flag by reversing that algorithm. I have created a simple python script to solve this challenge. Run this script:
+
+#### solve.py
+```
+encrypted_text = '灩捯䍔䙻ㄶ形楴獟楮獴㌴摟潦弸彥ㄴㅡて㝽'
+for i in encrypted_text:
+    i = ord(i)
+    belakang = str(bin(i)[-7:])
+    print(f"{chr(i>>8)}{chr(int(belakang,2))}",end='')
+```
+
+### Flag
+> picoCTF{16_bits_inst34d_of_8_e141a0f7}
