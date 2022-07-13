@@ -1,0 +1,8 @@
+steps:
+1. we have to understand first between two command in linux (deb), strings, and cat.
+2. for this situation we will use strings command.
+3. started with download the file.
+4. type strings <file_name>.
+5. in here the output is bunch of string character. we have to filtering the output with grep command.
+6. type strings <file_name> | grep "pico"
+7. finally, we found the flag
