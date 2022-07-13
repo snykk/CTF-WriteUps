@@ -1,0 +1,16 @@
+#write up easy peasy (cryptography) | picoCTF
+Steps:
+1. Downloads python file otp.py
+2. type "nc mercury.picoctf.net 58913" on the terminal. then the encrypt flag will show
+	we have this, "51124f4d194969633e4b52026f4c07513a6f4d05516e1e50536c4954066a1c57"
+3. open python and run "len(encrypt flag)" for ensure the length of string flag
+4. type "python -c "print('a'*49968);print('a'*32)" | nc mercury.picoctf.net 58913" on the terminal
+	this the result, "03464b4f1a1c3a313d1951573d195102383d1907533d1905033d1904043d1904"
+5. open python again and then run some command bellow
+~ ef=0x{flag on the step 2}
+~ ea=0x{flag on the step 4}
+~ pa=0x61...... -> 61 with 64 length same like the flag length
+~ '{:x}'.format(ef*ea*pa)
+	voilaaa, "3335656362343233623362343334373263333563633266343130313163366432"
+6. last, we convert from hex to ascii in https://www.rapidtables.com/convert/number/hex-to-ascii.html
+	finally, we found the flag "35ecb423b3b43472c35cc2f41011c6d2"
