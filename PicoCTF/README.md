@@ -17,7 +17,7 @@ This file has a flag in plain sight (aka "in-the-clear"). [Download flag](https:
 3. `$ man cat`
 
 ### Solution
-The challenge gives us a link to download a certain data. We can use `wget` command to download data directly from terminal. After that, we get a file named "flags". try using `cat` command to show raw content of file, also we can use `string` command to get all readable content. And then, Voila we get the flag. easy start is it?
+The challenge gives us a link to download a certain data. We can use `wget` command to download data directly from terminal. After that, we get a file named "flag". try using `cat` command to show raw content of file, also we can use `string` command to get all readable content. And then, Voila we get the flag. easy start is it?
 
 ### Flag
 > picoCTF{s4n1ty_v3r1f13d_f28ac910}
@@ -346,6 +346,25 @@ RSA is all about crazy big prime factorization. If you new for this try to learn
 
 Run this [script](https://github.com/snykk/CTF-WriteUps/blob/master/PicoCTF/Cryptography/Mind%20Your%20Ps%20and%20Qs/solve.py) to get the flag
 
+```
+
+from Crypto.Util.number import inverse, long_to_bytes
+
+c = 843044897663847841476319711639772861390329326681532977209935413827620909782846667
+n = 1422450808944701344261903748621562998784243662042303391362692043823716783771691667
+e = 65537
+p = 2159947535959146091116171018558446546179
+q = 658558036833541874645521278345168572231473
+
+phi = (p-1)*(q-1)
+
+d = inverse(e, phi)
+
+m = pow(c,d,n)
+
+print(long_to_bytes(m))
+```
+
 ### Flag
 > picoCTF{sma11_N_n0_g0od_00264570}
 
@@ -366,7 +385,7 @@ Can you look at the data in this binary: [static](https://mercury.picoctf.net/st
 no hint
 
 ### Solution
-We can use the strings command to get all the readable content of the [ELF file](https://github.com/snykk/CTF-WriteUps/tree/master/PicoCTF/General%20Skills/Static%20aint%20always%20noise). Add grep with pipe to get specific content using pico ctf flag pattern
+We can use the `strings` command to get all the readable content of the [ELF file](https://github.com/snykk/CTF-WriteUps/tree/master/PicoCTF/General%20Skills/Static%20aint%20always%20noise). Add grep with pipe to get specific content using pico ctf flag pattern
 > strings static | grep pico
 
 ### Flag
@@ -389,8 +408,134 @@ Using tabcomplete in the Terminal will add years to your life, esp. when dealing
 1. After `unzip`ing, this problem can be solved with 11 button-presses...(mostly Tab)...
 
 ### Solution
-Extract the zip file first. And then use the `cd` command and tab power to go deeper until we find and the ELF file. Run to get the flag
+Extract the zip file first. And then use the `cd` command and tab power to go deeper until we find an ELF file. Run to get the flag
 
 ### Flag
 > picoCTF{l3v3l_up!_t4k3_4_r35t!_f3553887}
 
+
+## keygenme-py
+
+### Description
+
+[keygenme-trial.py](https://mercury.picoctf.net/static/fb75b48f9214cf992a2199b5785564e7/keygenme-trial.py)
+
+### Information
+
+***Point Value***: 30 points
+
+***Category***:  Reverse Engineering
+
+### Hints
+no hint
+
+### Solution
+#### looking at the source code
+sometimes the best way to solve a reverse engineering challenge is to look at the [source code](https://github.com/snykk/CTF-WriteUps/blob/master/PicoCTF/Reverse%20Engineering/Keygenme-py/keygenme-trial.py), right?
+```
+# GLOBALS --v
+arcane_loop_trial = True
+jump_into_full = False
+full_version_code = ""
+
+username_trial = "FREEMAN"
+bUsername_trial = b"FREEMAN"
+
+key_part_static1_trial = "picoCTF{1n_7h3_|<3y_of_"
+key_part_dynamic1_trial = "xxxxxxxx"
+key_part_static2_trial = "}"
+key_full_template_trial = key_part_static1_trial + key_part_dynamic1_trial + key_part_static2_trial
+```
+
+What is really important to us?
+```
+username_trial = "FREEMAN"
+bUsername_trial = b"FREEMAN"
+```
+This will become clear later, next of course flags! Or here it is called **key_full_template_trial** . It consists of two parts static, and  a dynamic part.
+```
+key_part_static1_trial = "picoCTF{1n_7h3_|<3y_of_"
+key_part_dynamic1_trial = "xxxxxxxx"
+key_part_static2_trial = "}"
+key_full_template_trial = key_part_static1_trial + key_part_dynamic1_trial + key_part_static2_trial
+```
+Good... Now we have to look how the dynamic part is generated
+
+#### dynamic key generated
+
+**check_key** function is used to check dynamic key validity
+```
+def check_key(key, username_trial):
+
+    global key_full_template_trial
+
+    if len(key) != len(key_full_template_trial):
+        return False
+    else:
+        # Check static base key part --v
+        i = 0
+        for c in key_part_static1_trial:
+            if key[i] != c:
+                return False
+
+            i += 1
+
+        # TODO : test performance on toolbox container
+        # Check dynamic part --v
+        if key[i] != hashlib.sha256(username_trial).hexdigest()[4]:
+            return False
+        else:
+            i += 1
+
+        if key[i] != hashlib.sha256(username_trial).hexdigest()[5]:
+            return False
+        else:
+            i += 1
+
+        if key[i] != hashlib.sha256(username_trial).hexdigest()[3]:
+            return False
+        else:
+            i += 1
+
+        if key[i] != hashlib.sha256(username_trial).hexdigest()[6]:
+            return False
+        else:
+            i += 1
+
+        if key[i] != hashlib.sha256(username_trial).hexdigest()[2]:
+            return False
+        else:
+            i += 1
+
+        if key[i] != hashlib.sha256(username_trial).hexdigest()[7]:
+            return False
+        else:
+            i += 1
+
+        if key[i] != hashlib.sha256(username_trial).hexdigest()[1]:
+            return False
+        else:
+            i += 1
+
+        if key[i] != hashlib.sha256(username_trial).hexdigest()[8]:
+            return False
+
+        return True
+```
+First, check if the entered keys are the same length. also checks if the entered static key has the same characters. Next, the iterator `i` is in our dynamic section, and the `if tree` that checks our dynamic keys. you notice something? yeap, we have many indexes {4,5,3,6,2,7,1,8}. This index is used to retrieve certain characters from the sha256 hashing based on `username_trial` "FREEMAN" we saw earlier. Now we just need to create a script to retrieve certain characters  from the sha256 hash based on the index we got earlier. This is pretty easy to script. 
+[solve.py](https://github.com/snykk/CTF-WriteUps/blob/master/PicoCTF/Reverse%20Engineering/Keygenme-py/solve.py)
+```
+import hashlib
+from cryptography.fernet import Fernet
+import base64
+import sys
+
+username_trial = "FREEMAN"
+a = hashlib.sha256(username_trial.encode('utf-8')).hexdigest()
+print(f"{a[4]}{a[5]}{a[3]}{a[6]}{a[2]}{a[7]}{a[1]}{a[8]}")
+```
+> 0d208392
+
+Now we got the flag, just replace that string into our dynamic part
+### Flag
+> picoCTF{1n_7h3_|<3y_of_0d208392}
