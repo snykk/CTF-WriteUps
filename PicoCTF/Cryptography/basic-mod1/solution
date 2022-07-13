@@ -1,0 +1,4 @@
+1. hint is mod37 with 0-25 is uppercase 26-35 is decimal and 36 is underscore
+2. so we just create a simple python script to solve this problem 
+3. and voilaa we got the flag
+	flag --> R0UND_N_R0UND_8C863EE7
