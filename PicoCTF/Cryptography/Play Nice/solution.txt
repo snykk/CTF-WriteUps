@@ -1,0 +1,6 @@
+Steps:
+1. you can just encrypt msg again, "hnjm2e4t51v16gsg104i4oi94wrqli" to get ecrypted text twice
+2. and you make the enrypted text twice be come plain text
+3. so steps 1 - 2 it's not work 100%
+4. you can just follow this video, link -> https://www.youtube.com/watch?v=SJlun8zAv9A
+	flag -> dbc8bf9bae7152d35d3c200c46a0fa30
