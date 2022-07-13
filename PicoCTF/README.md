@@ -539,3 +539,76 @@ print(f"{a[4]}{a[5]}{a[3]}{a[6]}{a[2]}{a[7]}{a[1]}{a[8]}")
 Now we got the flag, just replace that string into our dynamic part
 ### Flag
 > picoCTF{1n_7h3_|<3y_of_0d208392}
+
+
+## Matryoshka doll
+
+### Description
+
+Matryoshka dolls are a set of wooden dolls of decreasing size placed one inside another. What's the final one? Image: [this](https://mercury.picoctf.net/static/205adad23bf9d8303081a0e71c9beab8/dolls.jpg)
+
+### Information
+
+***Point Value***: 30 points
+
+***Category***:  Forensics
+
+### Hints
+1. Wait, you can hide files inside files? But how do you find them?
+2. Make sure to submit the flag as picoCTF{XXXXX}
+
+### Solution
+The challenge give us a link to download the image file. At first this image looks useless. But, remember this is a forensic challenge. We have to look deeper into the file. I think there is a file inside this image, maybe rar or something. We can use powerful tool named [binwalk](https://www.kali.org/tools/binwalk/) to extract rar inside image easily with `binwalk e <name_file>`. 
+```
+Binwalk v2.3.3
+Craig Heffner, ReFirmLabs
+https://github.com/ReFirmLabs/binwalk
+
+Usage: binwalk [OPTIONS] [FILE1] [FILE2] [FILE3] ...
+
+Signature Scan Options:
+    -B, --signature              Scan target file(s) for common file signatures
+    -R, --raw=<str>              Scan target file(s) for the specified sequence of bytes
+    -A, --opcodes                Scan target file(s) for common executable opcode signatures
+    -m, --magic=<file>           Specify a custom magic file to use
+    -b, --dumb                   Disable smart signature keywords
+    -I, --invalid                Show results marked as invalid
+    -x, --exclude=<str>          Exclude results that match <str>
+    -y, --include=<str>          Only show results that match <str>
+    
+Extraction Options:
+    -e, --extract                Automatically extract known file types
+    -D, --dd=<type[:ext[:cmd]]>  Extract <type> signatures (regular expression), give the files an extension of <ext>, and execute <cmd>
+    -M, --matryoshka             Recursively scan extracted files
+....
+```
+Extract image
+```
+┌──(fikri㉿rootKali)-[~/Documents/Github/CTF-WriteUps/PicoCTF/Forensics/Matryoshka doll]
+└─$ binwalk -e dolls.jpg 
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             PNG image, 594 x 1104, 8-bit/color RGBA, non-interlaced
+3226          0xC9A           TIFF image data, big-endian, offset of first image directory: 8
+272492        0x4286C         Zip archive data, at least v2.0 to extract, compressed size: 378952, uncompressed size: 383937, name: base_images/2_c.jpg
+651610        0x9F15A         End of Zip archive, footer length: 22
+```
+
+At the first time, we get a folder ending with the name `.extracted`. we must enter it with the command `cd`. there is also a folder `base image` we have to go into it too. here we get another image file with the name `2_c.jpg`. Use [binwalk](https://www.kali.org/tools/binwalk/) again to extract the rar inside the image. Repeat this step until you get the flag.txt file. This is what my terminal looks like
+> binwalk -e dolls.jpg\
+> cd _dolls.jpg.extracted/\
+> cd base_images/\
+> binwalk -e 2_c.jpg\
+> cd _2_c.jpg.extracted/\
+> cd base_images/\
+> binwalk -e 3_c.jpg\
+> cd _3_c.jpg.extracted/\
+> cd base_images/\
+> binwalk -e 4_c.jpg\
+> cd _4_c.jpg.extracted/\
+> cat flag.txt
+
+### Flag
+> picoCTF{96fac089316e094d41ea046900197662}
+
