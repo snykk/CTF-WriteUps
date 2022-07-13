@@ -1,0 +1,4 @@
+web : jupiter.challenges.picoctf.org:7480
+just stop when browser load data before get an error page. i think its such a dumb solution but its work lmao
+
+profesional solution -> try to run burpsuite
