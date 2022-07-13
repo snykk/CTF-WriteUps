@@ -1,0 +1,1 @@
+just look at the if statement inside python script and you will get the password to bypass the auth when running that python script to get the flag
