@@ -1,0 +1,6 @@
+Steps:
+1. if we look at the title first thing that i guest is a metadata. 
+2. all becomes clear when we read the hint.
+3. so with out further ado lets try to catch the metadata of a file using exiftools
+4. voilaa we get a flag, so simple
+	flag -> picoCTF{s0_m3ta_fec06741}
