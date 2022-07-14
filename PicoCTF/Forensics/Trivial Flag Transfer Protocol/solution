@@ -1,0 +1,7 @@
+Steps:
+1. extract object file (tftp) from wireshark
+2. in here we get 3 picture, 2 txt (instruction and plan), and last deb program
+3. when we first time for looing at the txt file we think its been encrypt with caesar cipher. so we have to decrypt first using bruteforce approach. i already make a program to solve this. then, yeap, we get the plain text.
+4. try every possible that flag hidden in this file with strings command, exiftools, zsteg, stegsnowm steghid, etc for each picture
+5. after a long whil we got a txt file inside the picture3.
+6. nice one.
