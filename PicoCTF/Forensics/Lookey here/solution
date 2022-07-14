@@ -1,0 +1,6 @@
+Steps:
+1. first, when we try to read this file with cat command we just get a bounch of word that lazy to read
+2. i think we need to filter that word with important key like the template flag.
+3. so try to grep this result (cat result) with grep command
+4. type, cat anthem.flag.txt | grep pico
+flag -> picoCTF{gr3p_15_@w3s0m3_58f5c024}
