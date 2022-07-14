@@ -1,0 +1,7 @@
+Steps:
+1. this category challenge is forensics. so i think we have look at the detail data.
+2. i've been try with exiftools, cat command, and string command and didn't work.
+3. after a couple of hour i foun the tools named zsteg.
+4. i try to use tools in the terminal with the command below
+		-> zsteg all concat_v.png and voilaa its work
+	flag 	-> picoCTF{imag3_m4n1pul4t10n_sl4p5}
