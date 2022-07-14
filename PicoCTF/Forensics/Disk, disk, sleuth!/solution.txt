@@ -1,0 +1,6 @@
+Steps:
+1. extract .gz file first
+2. try to use file command to know what is the file exactly, in here we can't get the meal
+3. try to use strings with grep, like strings <filename> | grep "pico"
+4. voila we get the flag...
+	flag -> picoCTF{f0r3ns1c4t0r_n30phyt3_267e38f6}
