@@ -1,0 +1,6 @@
+steps:
+1. change file name from .pptm to .zip
+2. unzip the file
+3. we found suspicious file named hidden with string inside
+4. lets decode that string with base64 decoder
+5. finally, we found plain string flag
