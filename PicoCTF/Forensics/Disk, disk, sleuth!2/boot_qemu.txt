@@ -1,0 +1,1 @@
+qemu -hda dds2-alpine.flag.img -m 265
