@@ -1,0 +1,16 @@
+steps:
+1. cp Flag.pdf flag.sh
+2. ar x flag
+3. mv flag flag_old
+4. cpio -iv < flag_old
+5. bzip2 -d flag
+6. mv flag.out flag.gz
+7. gunzip flag.gz
+8. lzip -d flag
+9. lz4 -d flag.out flag
+10. mv flag flag.lzma
+11. lzop -d flag -o baru
+12. lzip -d baru
+13. mv baru.out baru.xz
+14. xz -d baru.xz
+15. hex -d baru
