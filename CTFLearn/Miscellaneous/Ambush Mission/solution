@@ -1,0 +1,10 @@
+Steps:
+1. open this link -> https://stegonline.georgeom.net/image
+2. drop image
+3. choose "browse bit planes"
+4. voilaa we get base64 encription in reverse version
+5. reverse again and then decode it with base64
+6. we get the flag
+	flag -> CTFlearn{m3Et_me_4t_12_aM}
+	
+note: also we can crack this challenge using stegsolve in step 1
