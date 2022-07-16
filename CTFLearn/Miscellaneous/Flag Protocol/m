@@ -1,0 +1,121 @@
+!This program cannot be run in DOS mode.
+.text
+`.rsrc
+@.reloc
++Ms	
+*BSJB
+v4.0.30319
+#Strings
+#GUID
+#Blob
+IEnumerable`1
+List`1
+B72B0A809128AEF100E729223023C74BE9F597E3
+__StaticArrayInitTypeSize=25
+<Module>
+<PrivateImplementationDetails>
+D1012F6EE2494B344B982E29F080EC4AB8BB55EF
+get_ASCII
+System.Collections.Generic
+System.Threading.Thread
+<FlagByte>k__BackingField
+<SequenceSize>k__BackingField
+<SequenceNumber>k__BackingField
+Send
+AddRange
+Take
+Enumerable
+RuntimeFieldHandle
+System.Console
+System.Runtime
+WriteLine
+ValueType
+CompilerGeneratedAttribute
+DebuggableAttribute
+AssemblyTitleAttribute
+TargetFrameworkAttribute
+AssemblyFileVersionAttribute
+AssemblyInformationalVersionAttribute
+AssemblyConfigurationAttribute
+TheFlagIsAttribute
+CompilationRelaxationsAttribute
+AssemblyProductAttribute
+AssemblyCompanyAttribute
+RuntimeCompatibilityAttribute
+get_FlagByte
+set_FlagByte
+value
+get_SequenceSize
+set_SequenceSize
+System.Threading
+Encoding
+System.Runtime.Versioning
+GetString
+_TheFlagCanBeCapturedWithoutReversing
+get_Length
+FlagProtocol.dll
+FlagProtocol
+Program
+System
+Main
+System.Reflection
+Sleep
+System.Linq
+get_SequenceNumber
+set_SequenceNumber
+.ctor
+.cctor
+System.Diagnostics
+_pieces
+System.Runtime.CompilerServices
+DebuggingModes
+FromBytes
+ToBytes
+GetBytes
+bytes
+System.Net.Primitives
+_indexes
+args
+System.Collections
+MagicNumbers
+RuntimeHelpers
+IPAddress
+System.Net.Sockets
+Object
+System.Net
+FlagPacket
+UdpClient
+IPEndPoint
+get_Count
+Insert
+set_EnableBroadcast
+System.Text
+InitializeArray
+ToArray
+op_Inequality
+WrapNonExceptionThrows
+.NETCoreApp,Version=v2.2
+FrameworkDisplayName
+FlagProtocol
+Release
+1.0.0.0
+1.0.0
+FCTFlearn{aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1kUXc0dzlXZ1hjUQ==}
+RSDS
+C:\dev\CTF.NET\FlagProtocol\FlagProtocol\obj\Release\netcoreapp2.2\FlagProtocol.pdb
+SHA256
+'CC0
+_CorExeMain
+mscoree.dll
+dC}3auy{tec_Fl3p0urT4nrm_
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+  <assemblyIdentity version="1.0.0.0" name="MyApplication.app"/>
+  <trustInfo xmlns="urn:schemas-microsoft-com:asm.v2">
+    <security>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <requestedExecutionLevel level="asInvoker" uiAccess="false"/>
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+</assembly>
