@@ -1,0 +1,11 @@
+Steps:
+1. type, zbarimg "qrcode.39907201.png"
+2. we got a strings like decrypt by base64
+3. decrypt that file with add the pipe -> zbarimg "qrcode.39907201.png" | sed 's/.*://'
+4. but we still get a random char. but we make a progress still make a progress and i think that is a caesar cipher
+5. lets try decrypt that cipher with rot_13 in python
+6. follow a couple of command bellow:
+~> import codecs
+~> print(codecs.encode("synt vf : a0_obql_s0etrg_de_pbqr", "rot_13"))
+flag is : n0_body_f0rget_qr_code
+7. yeap finally we got the flag
