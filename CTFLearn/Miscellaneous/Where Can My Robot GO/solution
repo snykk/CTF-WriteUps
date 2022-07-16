@@ -1,0 +1,11 @@
+Steps:
+1. we have to find the robots like hint say
+2. try to visit https://ctflearn.com/challenge/107/robots.txt.
+3. there is no flag just error request.
+4. okey lets try to look at the root path. https://ctflearn.com/robots.txt
+5. we have some information bellow:
+User-agent: *
+Disallow: /70r3hnanldfspufdsoifnlds.html 
+6. lets try to visit https://ctflearn.com/70r3hnanldfspufdsoifnlds.html.
+7. voila we get the flag
+	flag -> CTFlearn{r0b0ts_4r3_th3_futur3}
