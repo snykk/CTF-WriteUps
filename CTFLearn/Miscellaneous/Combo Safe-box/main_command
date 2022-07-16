@@ -1,0 +1,2 @@
+for i in {1..15};do echo -ne 'Slide15 		';xmllint --format ppt/slides/_rels/slide15.xml.rels | grep -iE -o 'slide..?\.xml'| sed 's/slide//g;s/\.xml/,/g' | tr -d '
+';echo ;done
