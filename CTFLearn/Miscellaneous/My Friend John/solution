@@ -1,0 +1,8 @@
+Steps:
+1. we given 1 zip file "MyFriendJohn.zip", just unzip that file first.
+2. then we get another zip "use-rockyou.zip" that protected with certain password.
+3. we can follow the main command that can solve this challenge. the command bellow:
+ ~ zip2john use-rockyou.zip > new_file.hashes (we can change the extension to txt too or the others)
+ ~ john --wordlist=<wordlists_file.txt> new_file.hashes (here i use wordlists rockyou.txt, the kali linux default wordlist)
+ ~ enter the password and we can succes unzip
+ ~ repeat the steps until we get the flag
