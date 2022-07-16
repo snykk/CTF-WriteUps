@@ -1,0 +1,7 @@
+Steps:
+1. type "strings program.exe > output" to put the bunch of string in the file because we will have fun with it
+2. ALDI is the key, so lets try to find string "ALDI" in the "output"
+3. we have png file that encrypt with base64 
+4. visit online decoder to get the png image, here the link -> https://base64.guru/converter/decode/image/png
+5. here we go, we got the flag
+	the flag is image.png in this directories
