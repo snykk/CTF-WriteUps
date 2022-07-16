@@ -1,0 +1,8 @@
+Link -> https://web.ctflearn.com/web7/
+this website is vuln of command injection attack, we can follow a couple of steps below:
+1. open the link to visit the page, also open burpsuite
+2. we can modify expression inside request with burp suite.
+3. this is the normal "expression -> 3+*+2+" 
+4. try to executy linux command, so  modify the expression until like this -> "expression;ls"
+5. voila we get the flag
+	flag ->ctf{watch_0ut_f0r_th3_m0ng00s3}
