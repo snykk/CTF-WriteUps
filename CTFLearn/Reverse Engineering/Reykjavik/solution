@@ -1,0 +1,1 @@
+run 'gdb Reykjavik sdf' to debug the program and you will get the flag
