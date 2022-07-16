@@ -1,0 +1,10 @@
+link -> https://gobustme.ctflearn.com/
+
+Steps:
+1. hint that we have after visit that link is a wordlist.
+2. i think that wordlist probably is a dir / file in that path. maybe we have to use tools to generated url named dirbuster
+3. lets get some fun.
+4. in the bruteforce report, we found that dir "call" is exist as well as carpet, flag, etc.
+5. there is no way, we have to open in one by one.
+6. when we try to open "hide" directory, we found the flag
+	VOILAA flag -> CTFlearn{gh0sbu5t3rs_4ever}
