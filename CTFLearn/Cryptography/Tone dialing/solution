@@ -1,0 +1,8 @@
+Steps:
+1. we given the wav file that contain beep beep sound. yeap just beep beep.
+2. lets try to search on the google what is that mean with the key "tone dialing".
+3. after first time goolge it, we suggest that the file is the DMFT cryptography.
+4. next step we need to online decoder for decrypt the wav file into the plain text. and i found this -> http://dialabc.com/sound/detect/index.html
+5. the result of steps 4 is the only number. i think its for a decimal number. so i listen again the wave for group into the decimal number. and the result for that is the "number" file that i have been make.
+6. i make simple python program to convert from decimal number to char. and voilaa we get the flag.
+	flag -> CTFlean{CRYPTOGRAPHY}
