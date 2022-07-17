@@ -1,0 +1,7 @@
+Steps:
+1. The tittle is "BruXOR" i think its mean Bruteforce XOR.
+2. so, i decide to decode this cipher with online decoder.
+3. there are many online decoder for XOR bruteforcing. in this challenge we use cyberchef.
+4. when we decrypt that cipher, we found many weird strings. we have to scroll down and read one by one and see the strings like english senteces.
+5. after a couple of second we found the flag
+	flag -> flag{y0u_Have_bruteforce_XOR}
