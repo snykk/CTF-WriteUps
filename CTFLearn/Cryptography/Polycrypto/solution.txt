@@ -1,0 +1,6 @@
+Steps:
+1. i've been make program using python to convert polynomial to bin. just run that program
+2. in here we have a binary, now to convert bin to hex.
+3. and the last step, convert that hex to text ascii
+4. finally, we get the flag
+	flag -> flag{p0lynom1als_4r3_k00l}
