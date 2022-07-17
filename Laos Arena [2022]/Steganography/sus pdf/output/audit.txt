@@ -1,0 +1,25 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sat May 28 10:38:32 2022
+Invocation: foremost suss.pdf 
+Output directory: /home/fikri/Documents/CTF/Laos Arena/Final CTF 2022/Steganography/sus pdf/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: suss.pdf
+Start: Sat May 28 10:38:32 2022
+Length: 52 KB (53630 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.jpg 	      50 KB 	        315 	 
+1:	00000000.pdf 	      51 KB 	          0 	 
+Finish: Sat May 28 10:38:32 2022
+
+2 FILES EXTRACTED
+	
+jpg:= 1
+pdf:= 1
+------------------------------------------------------------------
+
+Foremost finished at Sat May 28 10:38:32 2022
