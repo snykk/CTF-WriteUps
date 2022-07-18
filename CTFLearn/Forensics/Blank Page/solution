@@ -1,0 +1,9 @@
+Steps:
+1. if we first opened "TheMessage.txt" we will get nothing. everything is blank
+2. dont worry we cant try to opened this file with xxd which that is the hex editor or we can also open this file in cyberchef.
+3. copy that dots and space stuff in the weird file.
+4. i think its a morse but whe i try to convert the morse into text i get nothing.
+5. after a couple of minutes i think that dots ans space is the binary that dots represent 1 and space is represent 0. each binary is separate by space so we can assume that every mod of 8 is space
+6. i already make the simple python script that solve this problem.
+7. when i run the script we will get the flag... voilaaa
+	flag -> CTFlearn{If_y0u_r3/\d_thi5_you_pa553d}
