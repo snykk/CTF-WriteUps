@@ -1,0 +1,7 @@
+Steps:
+1. in this challenge we given the pcapng flag (wireshark file)
+2. i think we have to run wireshark to see the beatifull detail on that file
+3. there are bunch of request and other stuff. we need to filtering that layout in http to see the detail readable.
+4. we scroll down and i suddenly focus on the GET requests that contain "msg" parameter.
+5. i tried to decode that file with base64 -d and voilla i get the flag
+	flag -> flag{AFlagInPCAP}
