@@ -1,0 +1,25 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Fri Feb 11 10:11:26 2022
+Invocation: foremost oreo.jpg 
+Output directory: /home/fikri/Documents/CTF/CtfLearn/Forensics/Milk's Best Friend/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: oreo.jpg
+Start: Fri Feb 11 10:11:26 2022
+Length: 15 KB (16327 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.jpg 	       9 KB 	          0 	 
+1:	00000018.rar 	       6 KB 	       9515 	 
+Finish: Fri Feb 11 10:11:26 2022
+
+2 FILES EXTRACTED
+	
+jpg:= 1
+rar:= 1
+------------------------------------------------------------------
+
+Foremost finished at Fri Feb 11 10:11:26 2022
