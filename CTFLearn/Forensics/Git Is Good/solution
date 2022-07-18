@@ -1,0 +1,7 @@
+Steps:
+1. open hidden file ".git"
+2. if we grep to search some spesific string like "flag" with type -> grep -r "flag" inside .git
+3. we saw in COMMIT_EDITMSG the dev already change the flag.txt
+4. next we just type "git show head" to see the changes
+5. hurrra we found a flag
+	flag -> flag{protect_your_git}
