@@ -1,0 +1,4 @@
+Steps:
+1. extract the hidden file with binwalk, type "binwalk -e AGT.png"
+2. jump into deeper image file and catch out all string with strings command
+3. if we scroll up through bunch of character we will see the flag
