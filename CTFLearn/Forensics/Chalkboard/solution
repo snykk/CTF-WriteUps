@@ -1,0 +1,11 @@
+Steps:
+1. using strings command for catch the string inside the image file
+2. solve the math equation to get the flag 
+
+The flag for this challenge is of the form:
+CTFlearn{I_Like_Math_x_y}
+where x and y are the solution to these equations:
+3x + 5y = 31
+7x + 9y = 59
+
+here the flag ->CTFlearn{I_Like_Math_2_5}
