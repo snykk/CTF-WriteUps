@@ -1,0 +1,7 @@
+Steps:
+1. use strings command to grep all string inside image file
+2. we know if there is a bunch of strings in head of output (include fake flag)
+3. one of the fake flag is CTFlearn{Flight_32_Leaves_soon_from_gate_126}. i think we need to brute force to implement caesar cipher in range of 32 to 126 in ascii table
+4. i make simple python program to solve this things.
+5. and voilaa we get the flag
+	flag -> CTFlearn{Maximus.Decimus.Meridius}
