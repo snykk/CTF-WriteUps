@@ -1,0 +1,1 @@
+just use binwalk tools and strings command to get the encrypt flag then decrypt through loop to get the plain text with bash program
