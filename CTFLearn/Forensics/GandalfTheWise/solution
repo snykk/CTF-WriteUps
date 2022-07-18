@@ -1,0 +1,8 @@
+Steps:
+1. use strings command to catch the string inside file .jpg
+2. in the top, we saw 3 lines that contain a random string where the first is clearly a base64 cipher
+3. lets try decrypt first string and the result is -> CTFlearn{xor_is_your_friend}
+4. oke in here lets asume that 2 string left is a text and a key to solve the xor cipher
+5. then i try to use simple python that i already make maybe 2 years ago. but it doesnt work. after farming in the thousand of web finally i have the solution but its similar like my code before. just remove the ord inside char. 
+6. finally we got the flag
+	flag -> CTFlearn{Gandalf.BilboBaggins}
