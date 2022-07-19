@@ -1,0 +1,6 @@
+Steps:
+1. tittle of this challenge is "WOW... So Meta". i think the clue is "meta" stands for metadata of this photo
+2. so, try look at the metada data with exiftools
+3. type, exiftools <filenamejpg> 
+4. voilaa we got the flag in the value of property camera serial number in exif
+	flag -> flag{EEe_x_I_FFf}
