@@ -1,0 +1,10 @@
+Steps:
+1. the hint is "steghide". maybe we try to solve this challenge using that tools
+2. try to type, "steghide -sf Minions1.jpeg" to extract data that maybe embeded inside file
+3. oops we have to enter the passphrase. i think we need to find the passphrase first
+4. use strings command as always
+5. we got a suspicious string inside pjeg file "myadmin"
+6. try to enter that string to bypass the extract pass. 
+7. yap we got it, now we found a raw.txt
+8. cat it and we get the flag, hurraa
+	flag -> CTFlearn{this_is_fun} 
