@@ -1,0 +1,10 @@
+Steps:
+1. use strings command for this .jpg file
+2. the 3th line we found the flag, detail bellow:
+JFIF
+CTFlearn{CTFIsEasy!!!}
+Q1RGbGVhcm57U2tpQmFuZmZ9Cg==
+3. but when i put the flag "CTFlearn{CTFIsEasy!!!}" its show the wrong answer
+4. i think the flag is string in the 3th line like base64 cipher
+5. when i decode the flag with base64 -d, yeap we got a flag
+	flag -> CTFlearn{SkiBanff}
