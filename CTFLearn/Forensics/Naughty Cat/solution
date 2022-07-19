@@ -1,0 +1,28 @@
+Steps:
+1. as always we doing to begin forensic challenge is use strings command. in here we now there is another file inside image (rar, txt, mp3)
+2. use binwalk to extract that file
+3. now we get the mp3, rar.
+4. if we open the mp3 file there is a capt "is a password here?". maybe this is a hint. so try to look deeper.
+4. we can use sonicvisualizer as we do before (in the previous challenge). try look at the spectrum.
+5. we get the message "sp3trum_1s_y0ur_fr13nd". i thinks its the password
+6. now try to extract rar file. but when we extract rar file, nothing happen
+7. try run strings "y0u_4r3_cl0s3.rar". we now that the header is broken. try to fix this first.
+8. below is a format of rar header
+rar v1 -> 52 61 72 21 1A 07 00
+rar v5 -> 52 61 72 21 1A 07 01 00 
+9. rar v1 is not work and v5 is work perfectly.
+10. we can extract the rar right now, and input the password that we found before, "sp3trum_1s_y0ur_fr13nd"
+11. now we get f1nnaly.txt. cat the file and we will get the flag as below
+           __/| 
+            \o.O|
+       _____(___)______ 
+      |       U        |________    __
+      |ZjByM241MWNzX21h|        |__|  |_________
+      |________________|NXQzcg==|::|  |        /
+      |                \._______|::|__|       <
+      |                         \::/  \._______\
+      |
+      |                                                 
+12. its easy to notice that is the cipher of base64 so decode first.
+13 and this is the plain text -> f0r3n51cs_ma5t3r
+	flag -> CTFlearn{f0r3n51cs_ma5t3r}
