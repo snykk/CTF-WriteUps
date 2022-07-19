@@ -1,0 +1,6 @@
+Steps:
+1. first and as always use common method to solve forensic problem yap we put strings command to grap all things inside file .pdf
+2. in here we get a bunch of information. we saw the ".secret", other file inside pdf, etc and we saw 2 strings that encrypt with basea64. maybe we try the strings first and go move to the file inside pdf
+3. we try to decrypt that string with base64.
+4. wuttt thats the flag. ok well we dont need to extract the file btw.
+	flag -> CTFlearn{)_1l0w3y0Um00my123}
