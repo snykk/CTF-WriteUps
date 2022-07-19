@@ -1,0 +1,8 @@
+Steps:
+1. open the link inside the "Begin Hack.jpg" after run strings command
+2. go deeper and open the image inside ".Processing.cerb4" but we need the key first
+3. try "password: Really? Again" that we found inside "Begin Hack.jpg"
+4. but its False
+5. after a few minutes i found another key "Nothing Is As It Seems" inside "Begin Hack.jpg" too
+6. now we can open the .jpg file named skycoder, lets zoom in to catch the flag
+	flag -> flag(hack_complete)

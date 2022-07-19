@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Fri Feb 11 13:28:33 2022
+Invocation: foremost skycoder.jpg 
+Output directory: /home/fikri/Documents/CTF/CtfLearn/Forensics/Up For A Little Challenge/zip from link inside foto/Did I Forget Again?/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: skycoder.jpg
+Start: Fri Feb 11 13:28:33 2022
+Length: 45 KB (46482 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.jpg 	      45 KB 	          0 	 
+Finish: Fri Feb 11 13:28:33 2022
+
+1 FILES EXTRACTED
+	
+jpg:= 1
+------------------------------------------------------------------
+
+Foremost finished at Fri Feb 11 13:28:33 2022
