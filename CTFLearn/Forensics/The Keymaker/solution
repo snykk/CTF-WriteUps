@@ -1,0 +1,23 @@
+Steps:
+1. like other forensic challenge we begin with strings command, type strings <image file>
+2. on the top we get fake flag with plain text, base64 cipher and aes ciphe i think
+3. lets try decode the base64 cipher first with base64 -d
+4. we found this message
+	openssl enc -d -aes-256-cbc -iv SOF0 -K SOS -in flag.enc -out flag -base64
+
+	iv does not include the marker or length of SOF0
+
+	key does not include the S0S marker
+5. i think the hint is SOF0 and S0S. time to journey with duckduckgo or google (if you dont mind if they are track your activity)
+6. my conclusion that the SOF0 and S0S is image marker -> SOS (Standard of Scan) with hex FFD9 and SOF0 (Start of Baseline DCT frame) with hex FFC0.
+7. now time to take a look in hex dump with wxhexeditor or xxd (if you prefer analys with terminal)
+8. copy the hex editor that begin with SOS hex and SOF0 hex. i already get the hex, the detail below:
+SOF0 -> 0800be00c803011100021101031101ff
+sos -> 000c03010002110311003f00f9766bfc44beda8f3f5c031b92cb0e92d6bdc952
+9. to close this challenge lets run this command 
+openssl enc -d -aes-256-cbc -iv "0800be00c803011100021101031101ff" -K "000c03010002110311003f00f9766bfc44beda8f3f5c031b92cb0e92d6bdc952" -in flag.enc -out flag -base64
+
+it will generate the flag and create the file name "flag"
+
+10. if we try to show the content of flag file we  will get the flag. yoo hoooo
+	 flag -> CTFlearn{Ne0.TheMatrix}
