@@ -1,0 +1,10 @@
+Steps:
+1. cek the extension of the file with "file" command. here we know that file is ogg file. or clearly we can cek header of the file in hex and search the magic type in google to know what is the extension of the file.
+2. we change the extension to .ogg
+3. if we play that music we just get the noise sound
+4. i get the hint if we try to catch the spectogram of that sound
+5. i use audio visualizer tools to do it.
+6. first i use audacity but i stuck in the settings to get the clear image to can decode the qr code. and i still stuck
+7. i use other tools named sonicvisualizer and its work, i get the clear barcode.
+8. when i scan with zbarimg  i redirected to pastebin link that contains the flag.
+	flag -> the_flag_is{A_sP3c7r0grAm?!}
