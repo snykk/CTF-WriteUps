@@ -1,0 +1,9 @@
+Steps:
+1. if we look at the desc "Don't be fooled by two 0xffd9 markers.". there is mention about "0xffd9", and i sure that it is a hex who contains in image file.
+2. lets try to search this stuff in internet.... yeap it is for EOI (end of image)
+3. so lets try to open hex editor (in this case i use wxhexeditor).
+4. evidently, we got 2 EOI inside MountainMan.jpg
+5. after a view minute i realize if we provided another hint in the desc "XOR is your friend"
+6. i think the 2 EOI is the barrier of the bruteforce xor cipher. so lets copy it and past into the bruteforce xor decode (in this case im gonna use cyber chef)
+7. when we try to xorbruteforce, we get the flag. yoo hoo
+	flag -> CTFlearn{Ubuntu_r0ck5}
